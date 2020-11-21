@@ -36,7 +36,7 @@ body {
     left: 0;
     bottom: 0;
     background-color: $overlay;
-    z-index: 0;
+    z-index: 9999;
   }
 
   .opener,
@@ -81,12 +81,11 @@ body {
 
   &.open {
     background-color: $white;
+    .overlay {
+      display: block;
+    }
     .open {
       display: flex;
-
-      .overlay {
-        display: block;
-      }
     }
     .closed {
       display: none;
@@ -212,6 +211,8 @@ body {
   }
 }
 
+///////////////////// DESKTOP
+
 @media (min-width: 1200px) {
   .navbar {
     padding-left: 70px;
@@ -231,10 +232,30 @@ body {
           font-weight: 600;
           margin-right: 30px;
           color: $white;
+          position: relative;
           cursor: pointer;
 
           &:last-child {
             margin-right: 0;
+          }
+
+          &::after {
+            content: "";
+            width: 0;
+            transition: width 0.3s ease;
+          }
+
+          &:hover {
+            padding-bottom: 8px;
+            &::after {
+              content: "";
+              width: 15px;
+              height: 2px;
+              background-color: $white;
+              position: absolute;
+              bottom: 0;
+              left: 35%;
+            }
           }
         }
       }
