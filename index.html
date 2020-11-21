@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Frontend Mentor | Room homepage</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <!-- closed -->
+      <div class="closed">
+        <span class="opener" role="button">
+          <img src="./images/icon-hamburger.svg" alt="" />
+        </span>
+        <span class="logo">
+          <img src="./images/logo.svg" alt="" />
+        </span>
+      </div>
+      <!-- open -->
+      <div class="open">
+        <div class="overlay"></div>
+        <span class="closer" role="button">
+          <img src="./images/icon-close.svg" alt="" />
+        </span>
+        <div class="items">
+          <span>home</span>
+          <span>shop</span>
+          <span>about</span>
+          <span>contact</span>
+        </div>
+      </div>
+      <!-- desktop -->
+      <div class="desktop">
+        <span class="logo">
+          <img src="./images/logo.svg" alt="" />
+        </span>
+        <div class="items">
+          <span>home</span>
+          <span>shop</span>
+          <span>about</span>
+          <span>contact</span>
+        </div>
+      </div>
+    </nav>
+    <div class="top-side">
+      <div class="slider">
+        <div class="images-wrapper">
+          <img src="./images/desktop-image-hero-1.jpg" alt="" />
+          <img src="./images/desktop-image-hero-2.jpg" alt="" />
+          <img src="./images/desktop-image-hero-3.jpg" alt="" />
+        </div>
+      </div>
+      <div class="discover">
+        <h1>Discover innovative ways to decorate</h1>
+        <p>
+          We provide unmatched quality, comfort, and style for property owners
+          across the country. Our experts combine form and function in bringing
+          your vision to life. Create a room in your own style with our
+          collection and make your property a reflection of you and what you
+          love.
+        </p>
+        <div class="shop-now">
+          <span class="label">SHOP NOW</span>
+          <span><img src="./images/icon-arrow.svg" alt="" /></span>
+        </div>
+        <div class="arrows">
+          <span class="arrow-left" role="button">
+            <img src="./images/icon-angle-left.svg" alt="" />
+          </span>
+          <span class="arrow-right" role="button">
+            <img src="./images/icon-angle-right.svg" alt="" />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-side">
+      <div class="image-about">
+        <img src="./images/image-about-dark.jpg" alt="" />
+      </div>
+      <div class="about-text">
+        <h3>ABOUT OUR FURNITURE</h3>
+        <p>
+          Our multifunctional collection blends design and function to suit your
+          individual taste. Make each room unique, or pick a cohesive theme that
+          best express your interests and what inspires you. Find the furniture
+          pieces you need, from traditional to contemporary styles or anything
+          in between. Product specialists are available to help you create your
+          dream space.
+        </p>
+      </div>
+      <div class="image-about">
+        <img src="./images/image-about-light.jpg" alt="" />
+      </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+  <script src="./utils/slider.js"></script>
+  <script src="./utils/navbar.js"></script>
+</html>

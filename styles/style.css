@@ -1,0 +1,277 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  font-family: "Spartan", sans-serif;
+}
+
+body {
+  font-size: 12px;
+}
+
+.navbar {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 45px 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.navbar .overlay {
+  display: none;
+  position: fixed;
+  top: 110px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+.navbar .opener,
+.navbar .closer {
+  z-index: 20;
+}
+.navbar .closed {
+  width: 100%;
+  display: flex;
+}
+.navbar .closed .logo {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.navbar .open {
+  display: none;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .open .items span {
+  font-weight: 600;
+  margin-right: 30px;
+}
+.navbar .open .items span:last-child {
+  margin-right: 0;
+}
+.navbar .desktop {
+  display: none;
+}
+.navbar.open {
+  background-color: #fff;
+}
+.navbar.open .open {
+  display: flex;
+}
+.navbar.open .open .overlay {
+  display: block;
+}
+.navbar.open .closed {
+  display: none;
+}
+
+.top-side .slider {
+  width: 100%;
+  height: 360px;
+  overflow-x: hidden;
+}
+.top-side .slider .images-wrapper {
+  display: flex;
+  width: calc(100vw * 3);
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+.top-side .slider .images-wrapper img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+.top-side .slider .images-wrapper.first {
+  transform: translateX(0);
+}
+.top-side .slider .images-wrapper.second {
+  transform: translateX(-100vw);
+}
+.top-side .slider .images-wrapper.third {
+  transform: translateX(calc(-100vw * 2));
+}
+.top-side .discover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 65px 25px;
+  position: relative;
+}
+.top-side .discover h1 {
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+.top-side .discover p {
+  color: #a1a1a1;
+  line-height: 20px;
+  height: 110px;
+  margin-bottom: 60px;
+}
+.top-side .discover .shop-now {
+  display: flex;
+  align-items: center;
+}
+.top-side .discover .shop-now .label {
+  font-weight: 600;
+  letter-spacing: 9.5px;
+  margin-right: 35px;
+  color: #454545;
+}
+.top-side .discover .arrows {
+  display: flex;
+  position: absolute;
+  top: -62px;
+  right: 0;
+}
+.top-side .discover .arrows .arrow-left,
+.top-side .discover .arrows .arrow-right {
+  background-color: #000;
+  padding: 22px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.top-side .discover .arrows .arrow-left img,
+.top-side .discover .arrows .arrow-right img {
+  width: 10px;
+}
+
+.bottom-side .image-about {
+  height: 238px;
+}
+.bottom-side .image-about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.bottom-side .about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 25px;
+}
+.bottom-side .about-text h3 {
+  font-size: 12px;
+  letter-spacing: 5.5px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.bottom-side .about-text p {
+  color: #a1a1a1;
+  line-height: 20px;
+}
+
+@media (min-width: 1200px) {
+  .navbar {
+    padding-left: 70px;
+  }
+  .navbar .open,
+.navbar .closed {
+    display: none;
+  }
+  .navbar .desktop {
+    display: flex;
+  }
+  .navbar .desktop .logo {
+    margin-right: 55px;
+  }
+  .navbar .desktop .items span {
+    font-weight: 600;
+    margin-right: 30px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .navbar .desktop .items span:last-child {
+    margin-right: 0;
+  }
+
+  .top-side,
+.bottom-side {
+    display: grid;
+  }
+
+  .top-side {
+    grid-template-columns: 60vw auto;
+    height: 66.75vh;
+  }
+  .top-side .slider {
+    height: 100%;
+  }
+  .top-side .slider .images-wrapper {
+    width: calc(60vw * 3);
+    height: 100%;
+    transition: transform 0.5s ease;
+  }
+  .top-side .slider .images-wrapper img {
+    width: 60vw;
+    height: 100%;
+    object-fit: cover;
+  }
+  .top-side .slider .images-wrapper.first {
+    transform: translateX(0);
+  }
+  .top-side .slider .images-wrapper.second {
+    transform: translateX(-60vw);
+  }
+  .top-side .slider .images-wrapper.third {
+    transform: translateX(calc(-60vw * 2));
+  }
+  .top-side .discover {
+    padding: 0 95px;
+  }
+  .top-side .discover h1 {
+    font-size: 35px;
+  }
+  .top-side .discover p {
+    margin-bottom: 20px;
+  }
+  .top-side .discover .shop-now {
+    cursor: pointer;
+  }
+  .top-side .discover .arrows {
+    top: unset;
+    right: unset;
+    left: 0;
+    bottom: 0;
+  }
+  .top-side .discover .arrows .arrow-left,
+.top-side .discover .arrows .arrow-right {
+    padding: 25px 30px;
+    transition: background-color 0.3s ease;
+  }
+  .top-side .discover .arrows .arrow-left:hover,
+.top-side .discover .arrows .arrow-right:hover {
+    background-color: #454545;
+  }
+  .top-side .discover .arrows .arrow-left img,
+.top-side .discover .arrows .arrow-right img {
+    width: 13px;
+  }
+
+  .bottom-side {
+    grid-template-columns: 30% 1fr 30%;
+    grid-template-rows: 100%;
+    height: 33.25vh;
+  }
+  .bottom-side .image-about {
+    height: unset;
+  }
+  .bottom-side .about-text {
+    padding: 0 45px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
